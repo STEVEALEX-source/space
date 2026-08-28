@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes from the Outer Dark</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<div class="intro-overlay" id="intro">
+  <canvas id="intro-canvas"></canvas>
+  <div class="intro-vignette"></div>
+  <div class="intro-content">
+    <div class="intro-eyebrow">A Visual Essay · MMXXVI</div>
+    <div class="intro-title">
+      <span class="intro-title-line">Field Notes</span>
+      <span class="intro-title-line">from the <em>Outer Dark</em></span>
+    </div>
+    <div class="intro-sub">A personal atlas of the eight worlds</div>
+    <button class="enter" id="enter-btn">
+      <span class="enter-text">Begin transmission</span>
+      <span class="enter-arrow">→</span>
+    </button>
+    <div class="intro-meta">
+      <span>Vol. I</span>
+      <span>·</span>
+      <span>Transmission 28.08.2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div class="loading-overlay" id="loading">
+  <div class="loading-content">
+    <div class="loading-ring">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
+        <circle cx="50" cy="50" r="45" class="ring-fill" id="load-ring"></circle>
+      </svg>
+    </div>
+    <div class="loading-label">Calibrating optics</div>
+    <div class="loading-status" id="load-status">initializing</div>
+  </div>
+</div>
+
+<div id="canvas-container"></div>
+<div class="vignette"></div>
+<div class="grain"></div>
+
+<div class="masthead">
+  <div class="issue">Vol. I · Transmission 28.08.2026</div>
+  <div class="title">Field Notes from the <em>Outer Dark</em></div>
+</div>
+
+<div class="planet-info" id="planet-info">
+  <button class="close" onclick="closeInfo()">×</button>
+  <div class="chapter" id="pi-chapter"></div>
+  <div class="name" id="pi-name"></div>
+  <div class="epigraph" id="pi-epigraph"></div>
+  <div class="prose" id="pi-prose"></div>
+  <div class="data-sheet" id="pi-data"></div>
+</div>
+
+<div class="bottom-bar">
+  <div class="counter"><span class="current" id="cur">01</span> / <span id="tot">08</span></div>
+  <div class="planet-nav" id="planet-nav"></div>
+  <div class="nav-arrows">
+    <button id="prev" aria-label="Previous">←</button>
+    <button id="next" aria-label="Next">→</button>
+  </div>
+</div>
+<div class="hint">Drag to rotate · Scroll to zoom · Click a planet</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="main.js"></script>
+</body>
+</html>
