@@ -8,7 +8,7 @@ An interactive 3D experience built with Three.js — soft lighting, procedural p
 
 ## Live Demo
 
-[View the project](https://yourusername.github.io/field-notes-outer-dark/)  
+[View the project](https://stevealex-source.github.io/space/)  
 
 ---
 
