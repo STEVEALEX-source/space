@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- INTRO -->
 <div class="intro-overlay" id="intro">
   <canvas id="intro-canvas"></canvas>
   <div class="intro-vignette"></div>
@@ -21,7 +20,7 @@
       <span class="intro-title-line">Field Notes</span>
       <span class="intro-title-line">from the <em>Outer Dark</em></span>
     </div>
-    <div class="intro-sub">A personal atlas of the eight worlds</div>
+    <div class="intro-sub">From the Solar System to the Edge of the Local Group</div>
     <button class="enter" id="enter-btn">
       <span class="enter-text">Begin transmission</span>
       <span class="enter-arrow">→</span>
@@ -34,7 +33,6 @@
   </div>
 </div>
 
-<!-- LOADING -->
 <div class="loading-overlay" id="loading">
   <div class="loading-content">
     <div class="loading-ring">
@@ -57,6 +55,13 @@
   <div class="title">Field Notes from the <em>Outer Dark</em></div>
 </div>
 
+<div class="view-toggle" id="view-toggle">
+  <button class="view-btn active" id="view-planets">Planets</button>
+  <button class="view-btn" id="view-dwarfs">Dwarfs</button>
+  <button class="view-btn" id="view-milkyway">Milky Way</button>
+  <button class="view-btn" id="view-galaxies">Galaxies</button>
+</div>
+
 <div class="planet-info" id="planet-info">
   <button class="close" onclick="closeInfo()">×</button>
   <div class="chapter" id="pi-chapter"></div>
@@ -64,6 +69,11 @@
   <div class="epigraph" id="pi-epigraph"></div>
   <div class="prose" id="pi-prose"></div>
   <div class="data-sheet" id="pi-data"></div>
+</div>
+
+<div class="sun-marker" id="sun-marker" style="display:none;">
+  <div class="dot"></div>
+  <div class="label">The Sun · Orion Arm · 26,000 ly from center</div>
 </div>
 
 <div class="bottom-bar">
